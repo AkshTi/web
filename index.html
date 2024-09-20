@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Akshata Tiwari Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ecce73;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Akshata Tiwari</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+			  <li class="nav-item"><a href="#publications-section" class="nav-link"><span>Publications</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/improved.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Akshata Tiwari</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Software Engineering, AI, and Finance  '
+						// 'Machine Learning ',
+						// 'Finance ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>CS/AI @ MIT</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/akshata-tiwari-a2b980208/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/AkshTi" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s"></span> <span>Akshata Tiwari</span></p>
+										<p><span class="title-s"> </span> <span>Massachusetts Institute of Technology (MIT)</span></p>
+										<p><span class="title-s"></span> <span>Computer Science/AI, Finance</span></p>
+										<p><span class="title-s"> </span> <span>May 2026</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>PYTHON</span> <span class="pull-right">98%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Algorithms and Data Structures</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Front-end development</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I'm an undergraduate at MIT committed to strengthening skills in computer science, artificial intelligence, and finance. Having prior experience with software engineering, 
+									web development, and machine learning, I am passionate about leveraging new technologies to deliver scalable solutions. I'm always looking for ways to grow, and am open to any new challenge and opportunities!
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Relevant Coursework:</span> <span>Math for CS, Probability and Statistics, Data Structures and Algorithms, Fundamentals of
+										Programming, Programming in C/Assembly, Computation Structures, Machine Learning, Managerial Finance</span></li>
+									<li class="d-flex"><span>Languages:</span> <span>C++, Java, MATLAB, JavaScript, HTML, CSS</span></li>
+									<!-- <li class="d-flex"><span>ML Frameworks:</span> <span>Frameworks: PyTorch, TensorFlow, Keras -->
+									<li class="d-flex"><span>AI: </span> <span>Natural-language, computer vision, large-language, diffusion models</span></li>
+									<li class="d-flex"><span>Clubs and Societies:</span> <span>HackMIT, Society of Women Engineers, AI@MIT, MIT StartLabs, Scholars of Finance</span></li>
+									<!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li> -->
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://drive.google.com/file/d/1AYJ4oFs7RWQ3FKJBaO2IkIiBuguCyuYb/view?usp=sharing" class="btn btn-primary py-3 px-3">Resume</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <!-- <p></p> -->
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun. 2024-Present</span>
+						<h2>SRI International</h2>
+						<span class="position">ML Engineering Intern</span>
+						<p class="mt-4">
+							<ul>
+								<li>Engineering and optimizing diffusion models using PyTorch to handle out-of-distribution medical image inputs;
+									developed and deployed model training pipelines, generating over 50,000 high-quality medical images.</li>
+								<li>Trained NLP models for medical data preprocessing, integrated diffusion models and transformer architectures to produce
+									seamless data augmentation framework, performed code reviews, testing, and produced well-documented code.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan. 2024-Jun. 2024</span>
+						<h2>MIT Sloan School of Management</h2>
+						<span class="position">Software Engineering Intern</span>
+						<p class="mt-4">
+							<ul>
+								<li>Designed pipeline to detect MEV sandwiching attacks during Ethereum transactions.</li>
+								<li>Contributed to documentation, code review, and bug reporting of MindMeld, a gen-AI application. Designed testing
+									framework using Python and Selenium, and adhered to Agile software development practices.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun. 2024-Present</span>
+						<h2>MIT Laboratory for Financial Engineering</h2>
+						<span class="position">Undergrad Researcher</span>
+						<p class="mt-4">
+							<ul>
+								<li>Designing, training, and evaluating natural language models to generate a biomedical patent portfolio for optimal
+									investment strategies; researched financial markets, created testing framework to compare acc. of generated portfolios.</li>
+								<li>Fine-tuned BERT models for data collection, performed data augmentation with NLP/OCR and web-scraping methods.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun. 2024-Present</span>
+						<h2>SureStart</h2>
+						<span class="position">Program Manager</span>
+						<p class="mt-4">
+							<ul>
+								<li>Working with SureStart CEO to design and implement innovative AI-focused program. </li>
+								<li>Oversee high-level operations, mentor training and development, and executive communications to promote a dynamic learning environments.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+
+		<div class="row">
+			<h1 class="big-4">Honors and Awards</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row justify-content-center">
+		<p2>
+			<ul>
+			<li>IEEE Top 50 International Research Grant Winner (2024)</li>
+			<li>USA Regeneron Science Talent Search Top 300 Scholar (2023)</li>
+			<li>Honorable Mention: California Science and Engineering Fair (2022)</li>
+			<li>USA Computing Olympiad Silver Division (2022)</li>
+			<li>1st Place Research: Orange County Science Fair (2022)</li>
+			<li>PhysicsBowl Top 4% Scorer (2021)</li>
+			<li>Presidential Volunteer Service Award - Gold (2021)</li>
+			
+		</ul>
+		</p2></div>
+    	</div>
+    </section>
+
+	<!-- NEW SECTION -->
+
+
+	<section class="ftco-section" id="publications-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Publications</h1>
+			  <h2 class="mb-4">Publications</h2>
+			  <!-- <p>Key Projects</p> -->
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<!-- <div class="col-md-4 d-flex ftco-animate"> -->
+				
+				<div class="text mt-3 float-right d-block justify-content-center">
+					<!-- <ul> -->
+				  <h3 class="heading"><a href="https://mpsych.org/papers/tiwari2024noninvasive.pdf">Non-Invasive Stress Monitoring from Video</a></h3>
+				  <p>Published at the IEEE International Symposium for Biomedical Imaging (ISBI) 2024 </p>
+				<!-- </ul> -->
+				<!-- </div> -->
+			  <!-- </div> -->
+			</div>
+			<!-- <div class="col-md-4 d-flex ftco-animate"> -->
+				
+				<div class="text mt-3 float-right d-block justify-content-center">
+  
+				  <h3 class="heading"><a href="https://ieeexplore.ieee.org/document/9951558">The Effectiveness of Deep Learning on Erasing Satellite Streaks In Astronomical Photos</a></h3>
+				  <p>Published at IEEE International Conference on Transdisciplinary AI (TransAI) 2022</p>
+				<!-- </div> -->
+			  </div>
+			<!-- </div> -->
+			<!-- <div class="col-md-4 d-flex ftco-animate"> -->
+				
+				<div class="text mt-3 float-right d-block justify-content-center">
+				  <h3 class="heading"><a href="https://slideslive.com/38987430/noninvasive-stress-monitoring-from-video-for-semiautonomous-systems?ref=speaker-109624">Non-Invasive Stress Monitoring From Video For Semi-Autonomous Systems</a></h3>
+				  <p>Poster Presentation at the International Conference on Machine Learning (ICML) 2022.</p>
+				<!-- </div> -->
+			  <!-- </div> -->
+			</div>
+		  </div>
+	  <!-- <br> -->
+		  <!-- added justify-content-center to center align the last two projects -->
+		  <div class="row d-flex justify-content-center ">  
+			 
+				  </a>
+				  <div class="text mt-3 float-right d-block justify-content-center">
+					<h3 class="heading"><a href="https://scrs.in/conference/aita2024">New Approaches for Winner Determination via Minimum
+						Weighted Vertex Cover Computations</a></h3>
+					<p>Published at the International Conference on Artificial Intelligence: Theory and Applications (AITA) 2024</p>
+				  <!-- </div> -->
+				<!-- </div> -->
+			  </div>
+		   </div>
+		</div>
+	  </section>
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <!-- <p>Key Projects</p> -->
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/AkshTi/Non-Invasive-Stress-Detection-from-Video" class="block-20 zoom-effect" style="background-image: url('images/project1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AkshTi/Non-Invasive-Stress-Detection-from-Video">Non-Invasive Stress Monitoring for Semi-Autonomous Systems</a></h3>
+                <p>Developed multi-modal system that integrates computer vision models to evaluate stress indicators 
+					through facial recordings, and alerts the user if they exhibit medium to high stress levels. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/AkshTi/LatexAutodiagram" class="block-20 zoom-effect" style="background-image: url('images/project2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AkshTi/LatexAutodiagram">LaTeXify: A LaTeX auto diagramming app</a></h3>
+				<p>Worked with 4 peers to develop an end-to-end LaTeX autodiagramming sotware that converts images of hand-drawn diagrams to tikZ (LaTeX) code.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('images/project3.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Diffusion Models for Medical Image Generation (@ SRI International)</a></h3>
+                <p>Integrated diffusion models and transformer architectures to handle out-of-distribution medical imaging data, handling multiple modalities. Currently in-progress, code not available.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/AkshTi/SiLT-Project" class="block-20 zoom-effect" style="background-image: url('images/project4.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/AkshTi/SiLT-Project">SiLT - A Sign Language Translator</a></h3>
+				  <p>Developed a sign language translator that detects hand-signals in real time, in a letter-by-letter manner.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="" class="block-20 zoom-effect" style="background-image: url('images/project6.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">LLM-based Drug Repurposing (@ MIT LFE)</a></h3>
+				  <p>Designing a natural-language model to evaluate medicine repurposing. Currently in-progress at MIT's LFE, code will be updated soon.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="" class="block-20 zoom-effect" style="background-image: url('images/project5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">Gaussian Methods for Asteroid Orbit Determination</a></h3>
+				  <p>Conducted observations and used Python to determine the orbital elements for asteroid 1994 PC1. Project conducted at the Summer Science Program (SSP).</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <!-- <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+		<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github  </span> </h2>
+					<div class="heading"> <h4> I'm passionate about using tech to come up with real-world, scalable solutions. </h4>
+					<br>
+					<p><a href="https://github.com/AkshTi" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-3">
+		<div class="col-md-7 heading-section text-center ftco-animate">
+		  <h1 class="big big-2">Contact</h1>
+		  <h2 class="mb-4">Contact Me</h2>
+		  <p>Want to connect? </p>
+		</div>
+	  </div>
+
+<div class="row d-flex contact-info mb-5">
+	<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+		<div class="align-self-stretch box p-4 text-center">
+			<div class="icon d-flex align-items-center justify-content-center">
+				<span class="icon-globe"></span>
+			</div>
+			<h3 class="mb-4">Address</h3>
+		  <p>Cambridge, MA</p>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+		<div class="align-self-stretch box p-4 text-center">
+			<div class="icon d-flex align-items-center justify-content-center">
+				<span class="icon-linkedin"></span>
+			</div>
+			<h3 class="mb-4">LinkedIn</h3>
+	            <p><a href="https://www.linkedin.com/in/akshata-tiwari-a2b980208/">LinkedIn</a></p>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+		<div class="align-self-stretch box p-4 text-center">
+			<div class="icon d-flex align-items-center justify-content-center">
+				<span class="icon-paper-plane"></span>
+			</div>
+			<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:tiwari.akshata.direct@gmail.com">tiwari.akshata.direct@gmail.com</a></p>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+		<div class="align-self-stretch box p-4 text-center">
+			<div class="icon d-flex align-items-center justify-content-center">
+				<span class="icon-map-signs"></span>
+			</div>
+			<h3 class="mb-4">Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1AYJ4oFs7RWQ3FKJBaO2IkIiBuguCyuYb/view?usp=sharing">Resume</a></p>
+		</div>
+	</div>
+
+
+    <!-- <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Any questions or want to talk? I'd love to connect :D</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5"> -->
+          <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Bengaluru, India</p>
+	          </div>
+          </div> -->
+          <!-- <div class="col-md-6 col-lg-2 d-flex ftco-animate">
+          	<div class="align-self-stretch box text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-linkedin"></span>
+          		</div>
+          		<h3 class="mb-4">LinkedIn</h3>
+	            <p><a href="https://www.linkedin.com/in/akshata-tiwari-a2b980208/">LinkedIn</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:akshatat@mit.edu">akshatat@mit.edu</a></p>
+	          </div>
+          </div> -->
+          <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate"></div> 
+          	<div class="align-self-stretch box text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1AYJ4oFs7RWQ3FKJBaO2IkIiBuguCyuYb/view?usp=sharing">Resume</a></p>
+	          </div>
+          </div> -->
+
+		  <!-- <div class="container"> -->
+   <!-- </div>
+ </section> -->
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
